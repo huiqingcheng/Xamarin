@@ -1,4 +1,4 @@
-Xamarin.Android Wechat Binding
+Xamarin.Android WeChat SDK Binding
 =======
 
 This the Xamarin.Android Binding for Wechat SDK.
