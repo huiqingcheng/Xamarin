@@ -1,6 +1,10 @@
-Xamarin
+Xamarin.Android Wechat Binding
 =======
 
-Xamarin is a cross platform App development Framework which use C# language to write both iOS and Android Apps.
+This the Xamarin.Android Binding for Wechat SDK.
+Enjoy! :)
 
-Here we provide some useful components and librarys such as Wechat Android SDK binding.
+
+BTW, Please replace the APP_ID and Keystore respectively use your own one.
+
+
