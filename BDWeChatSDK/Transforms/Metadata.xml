@@ -1,0 +1,26 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  <remove-node path="/api/package[@name='com.tencent.mm.sdk.openapi']/interface[@name='IWXAPIEventHandler']/method[@name='onResp']"/>
+  <remove-node path="/api/package[@name='com.tencent.mm.sdk.openapi']/interface[@name='IWXAPIEventHandler']/method[@name='onReq']"/>
+  -->
+  <!-- 解决接口相关冲突 -->
+  <remove-node path="/api/package/class/implements[@name='android.provider.BaseColumns']" />
+  <remove-node path="/api/package[@name='com.tencent.mm.algorithm']/class[@name='LRUMap']"/>
+  <remove-node path="/api/package[@name='com.tencent.mm.sdk.platformtools']/class[@name='LBSManager']"/>
+  <remove-node path="/api/package[@name='com.tencent.mm.sdk.platformtools']/class[@name='PhoneStatusWatcher']"/>
+  <!-- 解决 与 ErrCode 等类, 接口, 枚举等类型的重名的问题 -->
+  <attr path="/api/package[@name='com.tencent.mm.sdk.openapi']/class[@name='BaseResp']/field[@name='errCode']" name="managedName">errCode</attr>
+  <attr path="/api/package[@name='com.tencent.mm.sdk.openapi']/class[@name='WXMediaMessage']/field[@name='mediaObject']" name="managedName">mediaObject</attr>
+  <!-- 还原访问修饰符 -->
+  <attr path="/api/package[@name='com.tencent.mm.sdk.contact']/class[@name='RContact']/method[@name='fields' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr  path="/api/package[@name='com.tencent.mm.sdk.conversation']/class[@name='RConversation']/method[@name='fields' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='com.tencent.mm.sdk.message']/class[@name='RMsgInfo']/method[@name='fields' and count(parameter)=0]" name="visibility">protected</attr>
+
+  
+  
+</metadata>
